@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-const useStorage = ({ initData }) => {
-    const [data, setData] = useState(initData);
-    const [arr, setArr] = useState(initData);
-    const deleteName = (name) => {
-        setArr(arr.filter(element => element !== name));
+const useStorage = ({ inputData }) => {
+    const [data, setData] = useState(inputData);
+    const [arr, setArr] = useState(inputData);
+    const deletenewName = (newName) => {
+        setArr(arr.filter(element => element !== newName));
     }
     return {
         data,
         arr,
-        deleteName,
+        deletenewName,
     };
 };
 
